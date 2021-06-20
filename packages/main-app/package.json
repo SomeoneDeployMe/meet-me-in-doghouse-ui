@@ -1,0 +1,14 @@
+{
+  "name": "@mmid/main-app",
+  "version": "1.0.0",
+  "main": "src/index.tsx",
+  "files": [
+    "src"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "@mmid/components": "1.0.0"
+  }
+}
