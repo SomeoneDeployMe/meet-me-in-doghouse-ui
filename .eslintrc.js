@@ -4,12 +4,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'airbnb',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'airbnb/hooks',
-  ],
+  extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'airbnb/hooks', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -18,18 +13,12 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-  ],
+  plugins: ['react', '@typescript-eslint'],
   settings: {
     'import/resolver': {
       typescript: {
         alwaysTryTypes: true,
-        project: [
-          'packages/*/tsconfig.json',
-          './tsconfig.json',
-        ],
+        project: ['packages/*/tsconfig.json', './tsconfig.json'],
       },
     },
   },
