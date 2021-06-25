@@ -1,11 +1,17 @@
 {
   "name": "@mmid/components",
   "version": "1.0.0",
-  "main": "src/index.tsx",
+  "main": "dist/index",
+  "types": "dist/index",
   "files": [
-    "src"
+    "dist"
   ],
   "license": "MIT",
+  "scripts": {
+    "build": "yarn run clean && yarn run compile",
+    "clean": "rm -rf ./dist",
+    "compile": "tsc -p tsconfig.build.json"
+  },
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"

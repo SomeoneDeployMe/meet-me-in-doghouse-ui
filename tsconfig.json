@@ -1,25 +1,12 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "skipLibCheck": false,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react",
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "sourceMap": true,
-    "removeComments": true,
-  },
-  "include": ["packages/**/*"]
+    "extends": "./tsconfig.build.json",
+
+    "compilerOptions": {
+        "baseUrl": "./packages",
+        "paths": {
+            "@mmid/components": ["components/src"],
+            "@mmid/main-app": ["main-app/src"],
+            "@mmid/*": ["*/src"]
+        }
+    }
 }

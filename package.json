@@ -2,7 +2,10 @@
   "version": "0.0.0",
   "scripts": {
     "start": "yarn run webpack serve --progress --config=./configs/webpack.dev.js",
-    "build": "yarn run webpack --config=./configs/webpack.prod.js"
+    "build": "yarn run webpack --config=./configs/webpack.prod.js",
+    "build:packages": "yarn tsc --build tsconfig.build.json",
+    "lint": "eslint . --ext .ts,.tsx --fix-dry-run",
+    "_postinstall": "yarn run build:packages"
   },
   "workspaces": [
     "packages/*"
@@ -15,9 +18,21 @@
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "fork-ts-checker-webpack-plugin": "^6.2.12",
     "html-webpack-plugin": "^5.3.1",
+    "is-ci": "^3.0.0",
+    "prettier": "^2.3.1",
     "ts-loader": "^9.2.3",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
     "typescript": "^4.3.2",
     "webpack": "^5.40.0",
     "webpack-cli": "^4.7.2",

@@ -1,14 +1,14 @@
+import {Hello} from '@mmid/components';
 import React from 'react';
-import ReactDOM from "react-dom";
-import {LoginForm} from "./auth/LoginForm";
+import ReactDOM from 'react-dom';
+import {LoginForm} from './auth/LoginForm';
 
-export const App = () => {
-    return <LoginForm />
-};
+export const App = () => <LoginForm />;
 
 ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById('root')
-)
+  <React.StrictMode>
+    <Hello />
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
