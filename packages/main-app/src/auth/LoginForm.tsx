@@ -1,4 +1,5 @@
 import React, {ChangeEvent, FC, useState} from 'react';
+import './main.scss';
 
 export const LoginForm: FC = () => {
   const [email, setEmail] = useState('');
