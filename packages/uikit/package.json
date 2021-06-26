@@ -1,5 +1,5 @@
 {
-  "name": "@mmid/main-app",
+  "name": "@mmid/uikit",
   "version": "1.0.0",
   "main": "dist/index",
   "types": "dist/index",
@@ -13,8 +13,7 @@
     "compile": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@mmid/components": "1.0.0",
-    "@mmid/uikit": "1.0.0"
+    "@mmid/theme": "1.0.0"
   },
   "peerDependencies": {
     "react": "*",

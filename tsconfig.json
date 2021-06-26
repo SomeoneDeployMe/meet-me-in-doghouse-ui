@@ -1,12 +1,16 @@
 {
-    "extends": "./tsconfig.build.json",
+  "extends": "./tsconfig.build.json",
 
-    "compilerOptions": {
-        "baseUrl": "./packages",
-        "paths": {
-            "@mmid/components": ["components/src"],
-            "@mmid/main-app": ["main-app/src"],
-            "@mmid/*": ["*/src"]
-        }
+  "compilerOptions": {
+    "baseUrl": "./packages",
+    "paths": {
+      "@mmid/theme": ["theme/src"],
+      "@mmid/uikit": ["uikit/src"],
+      "@mmid/components": ["components/src"],
+      "@mmid/main-app": ["main-app/src"],
+      "@mmid/*": ["*/src"]
     }
+  },
+
+  "files":  ["./typings.d.ts"]
 }

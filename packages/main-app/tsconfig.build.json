@@ -8,9 +8,14 @@
     "rootDir": "./src"
   },
 
-  "references": [{
-    "path": "../components/tsconfig.build.json"
-  }],
+  "references": [
+    {
+      "path": "../components/tsconfig.build.json",
+    },
+    {
+      "path": "../uikit/tsconfig.build.json"
+    }
+  ],
 
   "include": [
     "src/**/*"

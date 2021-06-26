@@ -1,5 +1,6 @@
 import React, {ChangeEvent, FC, useState} from 'react';
 import './main.scss';
+import {Button} from '@mmid/uikit';
 
 export const LoginForm: FC = () => {
   const [email, setEmail] = useState('');
@@ -21,7 +22,8 @@ export const LoginForm: FC = () => {
       <input value={pass} onChange={handlePassChange} />
       <br />
       <br />
-      <button type="button">Login</button>
+      <></>
+      <Button>Login</Button>
     </div>
   );
 };

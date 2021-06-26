@@ -34,5 +34,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'import/no-extraneous-dependencies': ['error', {devDependencies: true, optionalDependencies: false, peerDependencies: true}],
     '@typescript-eslint/no-var-requires': 'off',
+    'react/prop-types': 'off',
+    'react/button-has-type': 'off',
   },
 };

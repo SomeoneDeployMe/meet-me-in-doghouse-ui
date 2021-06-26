@@ -1,5 +1,5 @@
 {
-  "name": "@mmid/main-app",
+  "name": "@mmid/theme",
   "version": "1.0.0",
   "main": "dist/index",
   "types": "dist/index",
@@ -11,10 +11,6 @@
     "build": "yarn run clean && yarn run compile",
     "clean": "rm -rf ./dist",
     "compile": "tsc -p tsconfig.build.json"
-  },
-  "dependencies": {
-    "@mmid/components": "1.0.0",
-    "@mmid/uikit": "1.0.0"
   },
   "peerDependencies": {
     "react": "*",
