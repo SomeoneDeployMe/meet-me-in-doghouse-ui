@@ -36,5 +36,6 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     'react/prop-types': 'off',
     'react/button-has-type': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 };

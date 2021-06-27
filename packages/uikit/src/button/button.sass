@@ -1,12 +1,64 @@
-@import '~@mmid/theme/src/variables'
+@use "sass:color"
+@import '~@mmid/theme/src/variables' // TODO: import variables from @mmid/theme package, not from src folder
 
-.btn
-  background-color: $primary
+// Button classname with kit prefix
+$btn-classname: #{$cn-prefix}-btn
+
+// Define button colors mixin
+@mixin button-color($bg-color, $border-color, $text-color)
+  background-color: $bg-color
+  border-color: $border-color
+  color: $text-color
+
+// Define primary button colors mixin
+@mixin button-variant-primary($main-color, $text-color: $white)
+  @include button-color($main-color, $main-color, $text-color)
+
+  &:hover,
+  &:focus
+    @include button-color(color.scale($main-color, $lightness: 20%), color.scale($main-color, $lightness: 20%), $text-color)
+
+  &:active
+    @include button-color(color.scale($main-color, $lightness: -20%, $saturation: -10%), color.scale($main-color, $lightness: -20%, $saturation: -10%), $text-color)
+
+// Define default button colors mixin
+@mixin button-variant-default($main-color, $border-color: $main-color, $text-color: $main-color)
+  @include button-color(transparent, $border-color, $text-color)
+
+  &:hover,
+  &:focus
+    @include button-color(transparent, color.scale($main-color, $lightness: 20%), color.scale($main-color, $lightness: 20%))
+
+  &:active
+    @include button-color(transparent, color.scale($main-color, $lightness: -20%, $saturation: -10%), color.scale($main-color, $lightness: -20%, $saturation: -10%))
+
+.#{$btn-classname}
+  border-width: 1px
+  border-style: solid
   padding: 4px 12px
-  border: 1px solid $primary
-  color: $white
   cursor: pointer
-  transition: background-color 0.3s ease-in-out
+  transition: all 0.3s ease-out
+  border-radius: 2px
+  font-size: 14px
+  @include button-variant-default($primary, $gray, $black)
 
-  &:hover
-    background-color: #40a9ff
+  &.#{$btn-classname}-success
+    @include button-variant-default($success)
+
+  &.#{$btn-classname}-danger
+    @include button-variant-default($danger)
+
+  &.#{$btn-classname}-warning
+    @include button-variant-default($warning)
+
+.#{$btn-classname}-primary
+  @include button-variant-primary($primary)
+
+  &.#{$btn-classname}-success
+    @include button-variant-primary($success)
+
+  &.#{$btn-classname}-danger
+    @include button-variant-primary($danger)
+
+  &.#{$btn-classname}-warning
+    @include button-variant-primary($warning)

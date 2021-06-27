@@ -23,7 +23,27 @@ export const LoginForm: FC = () => {
       <br />
       <br />
       <></>
+      <Button primary>Login</Button>
+
+      <Button primary severity="success">
+        Login
+      </Button>
+
+      <Button primary severity="danger">
+        Login
+      </Button>
+
+      <Button primary severity="warning">
+        Login
+      </Button>
+
+      <br />
+      <br />
+
       <Button>Login</Button>
+      <Button severity="success">Login</Button>
+      <Button severity="danger">Login</Button>
+      <Button severity="warning">Login</Button>
     </div>
   );
 };

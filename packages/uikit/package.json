@@ -16,6 +16,7 @@
     "@mmid/theme": "1.0.0"
   },
   "peerDependencies": {
+    "clsx": "*",
     "react": "*",
     "react-dom": "*"
   }
