@@ -1,4 +1,4 @@
-import React, {FC, forwardRef} from 'react';
+import React, {ButtonHTMLAttributes, FC, forwardRef} from 'react';
 import clsx from 'clsx';
 
 /**
@@ -7,10 +7,10 @@ import clsx from 'clsx';
  * @prop {boolean} [primary] Mark the button as "primary" (filled by color).
  * @prop {'danger' | 'success' | 'warning'} [severity] Define button severity (affects its color).
  */
-type ButtonProps = {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   primary?: boolean;
   severity?: 'danger' | 'success' | 'warning';
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+}
 
 /**
  * Default props values.

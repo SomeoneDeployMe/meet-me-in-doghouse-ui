@@ -1,0 +1,27 @@
+@import '~@mmid/theme/src/variables'
+
+// Button classname with kit prefix
+$input-classname: #{$cn-prefix}-input
+
+.#{$input-classname}
+  font-size: 14px
+  line-height: 1.5
+
+  padding: 4px 12px
+
+  color: $black
+
+  border-width: 1px
+  border-style: solid
+  border-color: $gray
+  border-radius: 2px
+  outline: none
+
+  transition: all 0.3s ease-out
+
+  &:hover,
+  &:focus
+    border-color: $light-blue
+
+  &:focus
+    box-shadow: 0 0 0 2px #1890ff33
