@@ -1,32 +1,44 @@
-import React, {ChangeEvent, FC, useState} from 'react';
-import {Button, Input} from '@mmid/uikit';
+import React, {FC, useState} from 'react';
+import {Button, Col, Input, Row} from '@mmid/uikit';
 
 export const LoginForm: FC = () => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
 
-  const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setEmail(event.target.value);
+  const handleEmailChange = (v: string) => {
+    setEmail(v);
   };
 
-  const handlePassChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setPass(event.target.value);
+  const handlePassChange = (v: string) => {
+    setPass(v);
   };
 
   return (
     <div>
-      <Input value={email} onChange={handleEmailChange} />
-      <br />
-      <br />
-      <Input value={pass} onChange={handlePassChange} />
+      <Row>
+        <Col span={12}>
+          <Input value={email} onChange={handleEmailChange} />
+        </Col>
+
+        <Col span={12}>
+          <Input value={pass} onChange={handlePassChange} />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col>
+          <Button primary>Login</Button>
+        </Col>
+
+        <Col>
+          <Button primary severity="success">
+            Login
+          </Button>
+        </Col>
+      </Row>
       <br />
       <br />
       <></>
-      <Button primary>Login</Button>
-
-      <Button primary severity="success">
-        Login
-      </Button>
 
       <Button primary severity="danger">
         Login

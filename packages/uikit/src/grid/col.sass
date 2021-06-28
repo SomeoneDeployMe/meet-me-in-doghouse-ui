@@ -1,0 +1,17 @@
+@use 'sass:math'
+@import '~@mmid/theme/src/variables'
+
+// Grid column classname
+$col-classname: #{$cn-prefix}-col
+
+.#{$col-classname}
+  position: relative
+  flex-basis: 0
+  flex-grow: 1
+  max-width: 100%
+
+@for $i from 1 through 24
+  .#{$col-classname}-#{$i}
+    position: relative
+    flex: 0 0 math.div($i, 24) * 100%
+    max-width: math.div($i, 24) * 100%
