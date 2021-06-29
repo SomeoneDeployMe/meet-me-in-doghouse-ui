@@ -1,0 +1,17 @@
+@mixin generate-font-face($name, $weight, $style)
+  font-family: 'Roboto'
+  src: url('/public/assets/fonts/#{$name}.woff2') format('woff2'), url('/public/assets/fonts/#{$name}.woff') format('woff')
+  font-weight: $weight
+  font-style: $style
+
+@font-face
+  @include generate-font-face('Roboto-Regular', 400, normal)
+
+@font-face
+  @include generate-font-face('Roboto-RegularItalic', 400, italic)
+
+@font-face
+  @include generate-font-face('Roboto-Bold', 700, normal)
+
+@font-face
+  @include generate-font-face('Roboto-BoldItalic', 700, italic)
