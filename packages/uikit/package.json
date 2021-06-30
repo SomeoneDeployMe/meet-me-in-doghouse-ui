@@ -13,7 +13,8 @@
     "compile": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@mmid/theme": "1.0.0"
+    "@mmid/theme": "1.0.0",
+    "react-transition-group": "^4.4.2"
   },
   "peerDependencies": {
     "clsx": "*",
