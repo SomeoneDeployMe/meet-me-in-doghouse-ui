@@ -1,0 +1,102 @@
+@import '~@mmid/theme/src/variables'
+
+.modal-backdrop
+  position: fixed
+  width: 100vw
+  height: 100vh
+  background-color: $black
+  top: 0
+  left: 0
+  z-index: $modal-backdrop-z-index
+  opacity: 0.5
+
+  &.enter
+    opacity: 0
+
+  &.fading-in
+    opacity: $modal-backdrop-opacity
+    transition: $modal-backdrop-fade-transition
+
+  &.exit
+    opacity: $modal-backdrop-opacity
+
+  &.fading-out
+    opacity: 0
+    transition: $modal-backdrop-fade-transition
+
+.modal
+  position: fixed
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  z-index: $modal-z-index
+
+.modal-dialog
+  width: 500px
+  margin: 0 auto
+  top: 100px
+  position: relative
+  z-index: $modal-dialog-z-index
+
+  &.enter
+    opacity: 0
+    transform: $modal-fade-transform
+
+  &.fading-in
+    opacity: 1
+    transform: none
+    transition: $modal-fade-transition
+
+  &.exit
+    opacity: 1
+    transform: none
+
+  &.fading-out
+    opacity: 0
+    transform: $modal-fade-transform
+    transition: $modal-fade-transition
+
+.modal-content
+  background-color: $white
+  border-radius: $modal-border-radius
+  box-shadow: $modal-content-box-shadow
+
+  .modal-header
+    padding: $modal-header-padding-y $modal-header-padding-x
+    border-bottom: 1px solid $gray-4
+    position: relative
+
+    .modal-title
+      color: $black
+      font-size: 16px
+
+    .modal-close
+      color: $gray-7
+      background-color: transparent
+      border: 0
+      cursor: pointer
+      position: absolute
+      padding: 0
+      top: 0
+      right: 0
+      width: 52px
+      height: 52px
+      transition: color 0.3s
+
+      span
+        font-size: 28px
+
+      &:hover
+        color: $gray-8
+
+  .modal-body
+    padding: $modal-body-padding-y $modal-body-padding-x
+
+  .modal-footer
+    padding: $modal-footer-padding-y $modal-footer-padding-x
+    text-align: right
+    border-top: 1px solid $gray-4
+
+    .#{$cn-prefix}-btn + .#{$cn-prefix}-btn
+      margin-left: 8px
