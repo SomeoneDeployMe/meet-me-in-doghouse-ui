@@ -1,10 +1,11 @@
-import React, {FC, useState} from 'react';
-import {Button, Col, Input, Modal, Row, Title} from '@mmid/uikit';
+import React, {FC, useEffect, useState} from 'react';
+import {Button, Checkbox, Col, Input, Modal, Row, Title} from '@mmid/uikit';
 
 export const LoginForm: FC = () => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const [visible, setVisible] = useState(false);
+  const [checked, setChecked] = useState(true);
 
   const handleEmailChange = (v: string) => {
     setEmail(v);
@@ -20,6 +21,10 @@ export const LoginForm: FC = () => {
       <Button primary>Login</Button>
     </>
   );
+
+  useEffect(() => {
+    console.log(checked);
+  }, [checked]);
 
   return (
     <div>
@@ -70,6 +75,13 @@ export const LoginForm: FC = () => {
       <Button severity="success">Login</Button>
       <Button severity="danger">Login</Button>
       <Button severity="warning">Login</Button>
+
+      <br />
+      <br />
+
+      <Checkbox checked={checked} onChange={(val) => setChecked(val)}>
+        Check me
+      </Checkbox>
 
       {visible && (
         <Modal onClose={() => setVisible(false)} title="Login form" footer={footer()}>
