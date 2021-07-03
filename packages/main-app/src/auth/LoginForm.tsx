@@ -1,5 +1,5 @@
 import React, {FC, useEffect, useState} from 'react';
-import {Button, Checkbox, Col, Input, Modal, Row, Title} from '@mmid/uikit';
+import {Button, Checkbox, Col, Form, FormItem, Input, Modal, Row, Title} from '@mmid/uikit';
 
 export const LoginForm: FC = () => {
   const [email, setEmail] = useState('');
@@ -28,6 +28,21 @@ export const LoginForm: FC = () => {
 
   return (
     <div>
+      <Form>
+        <FormItem label="E-mail">
+          <Input value={email} onChange={handleEmailChange} />
+        </FormItem>
+
+        <FormItem label="Password">
+          <Input type="password" value={pass} onChange={handlePassChange} />
+        </FormItem>
+
+        <FormItem>
+          <Button primary onClick={() => setVisible(true)}>
+            Login
+          </Button>
+        </FormItem>
+      </Form>
       <Title>h1</Title>
       <Title level={2}>h2</Title>
       <Title level={3}>h3</Title>
