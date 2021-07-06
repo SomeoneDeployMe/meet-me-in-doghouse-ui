@@ -5,10 +5,25 @@
   padding: 0
   box-sizing: border-box
 
-.form-item
-  margin: 0 0 24px 0
+  .form-item
+    margin: 0 0 24px 0
 
-  &-label
-    color: $black
-    padding: 0 0 8px 0
-    font-size: 14px
+    &-label
+      color: $black
+      font-size: 14px
+
+      & > label
+        display: inline-flex
+        align-items: center
+        height: 100%
+
+  &.form-horizontal
+    .form-item-label
+      padding: 0
+
+  &.form-vertical
+    .form-item
+      flex-direction: column
+
+    .form-item-label
+      padding: 0 0 8px 0

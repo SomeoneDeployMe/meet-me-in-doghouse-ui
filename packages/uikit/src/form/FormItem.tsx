@@ -1,4 +1,7 @@
 import React, {FC} from 'react';
+import {FormItemLabel} from './FormItemLabel';
+import {Row} from '../grid';
+import {FormItemControl} from './FormItemControl';
 
 /**
  * Component props model.
@@ -13,14 +16,9 @@ interface FormItemProps {
  * Renders form unit - group of label and control.
  */
 export const FormItem: FC<FormItemProps> = ({label, children}) => (
-  <div className="form-item">
-    {label && (
-      <div className="form-item-label">
-        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label>{label}</label>
-      </div>
-    )}
+  <Row className="form-item">
+    {label && <FormItemLabel label={label} />}
 
-    <div className="form-item-control">{children}</div>
-  </div>
+    <FormItemControl>{children}</FormItemControl>
+  </Row>
 );

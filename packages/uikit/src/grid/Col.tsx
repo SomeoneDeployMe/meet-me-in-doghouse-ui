@@ -6,7 +6,7 @@ import clsx from 'clsx';
  *
  * @prop {number} [span]
  */
-interface ColProps extends HTMLAttributes<HTMLDivElement> {
+export interface ColProps extends HTMLAttributes<HTMLDivElement> {
   span?: number;
 }
 

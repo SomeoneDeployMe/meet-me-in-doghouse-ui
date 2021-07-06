@@ -28,21 +28,42 @@ export const LoginForm: FC = () => {
 
   return (
     <div>
-      <Form>
-        <FormItem label="E-mail">
-          <Input value={email} onChange={handleEmailChange} />
-        </FormItem>
+      <div style={{width: '400px'}}>
+        <Form layout="horizontal" labelCol={{span: 12}} controlCol={{span: 12}}>
+          <FormItem label="E-mail">
+            <Input value={email} onChange={handleEmailChange} />
+          </FormItem>
 
-        <FormItem label="Password">
-          <Input type="password" value={pass} onChange={handlePassChange} />
-        </FormItem>
+          <FormItem label="Password">
+            <Input type="password" value={pass} onChange={handlePassChange} />
+          </FormItem>
 
-        <FormItem>
-          <Button primary onClick={() => setVisible(true)}>
-            Login
-          </Button>
-        </FormItem>
-      </Form>
+          <FormItem>
+            <Button primary onClick={() => setVisible(true)}>
+              Login
+            </Button>
+          </FormItem>
+        </Form>
+      </div>
+
+      <div style={{width: '400px'}}>
+        <Form layout="vertical">
+          <FormItem label="E-mail">
+            <Input value={email} onChange={handleEmailChange} />
+          </FormItem>
+
+          <FormItem label="Password">
+            <Input type="password" value={pass} onChange={handlePassChange} />
+          </FormItem>
+
+          <FormItem>
+            <Button primary onClick={() => setVisible(true)}>
+              Login
+            </Button>
+          </FormItem>
+        </Form>
+      </div>
+
       <Title>h1</Title>
       <Title level={2}>h2</Title>
       <Title level={3}>h3</Title>
