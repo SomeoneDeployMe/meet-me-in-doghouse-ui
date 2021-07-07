@@ -5,7 +5,9 @@
     "build": "yarn run webpack --config=./configs/webpack.prod.js",
     "build:packages": "yarn tsc --build tsconfig.build.json",
     "lint": "eslint . --ext .ts,.tsx --fix-dry-run",
-    "_postinstall": "yarn run build:packages"
+    "_postinstall": "yarn run build:packages",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "workspaces": [
     "packages/*"
@@ -14,14 +16,22 @@
   "dependencies": {
     "clsx": "^1.1.1",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "style-loader": "2.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@storybook/addon-actions": "^6.3.2",
+    "@storybook/addon-essentials": "^6.3.2",
+    "@storybook/addon-links": "^6.3.2",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.3.2",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-transition-group": "^4.4.1",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
     "eslint": "^7.29.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -36,8 +46,7 @@
     "is-ci": "^3.0.0",
     "prettier": "^2.3.1",
     "sass": "^1.35.1",
-    "sass-loader": "^12.1.0",
-    "style-loader": "^3.0.0",
+    "sass-loader": "10.1.1",
     "ts-loader": "^9.2.3",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "typescript": "^4.3.2",

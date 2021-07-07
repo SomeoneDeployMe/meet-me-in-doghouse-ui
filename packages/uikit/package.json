@@ -19,6 +19,10 @@
   "peerDependencies": {
     "clsx": "*",
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "@storybook/addon-actions": "*",
+    "@storybook/addon-essentials": "*",
+    "@storybook/addon-links": "*",
+    "@storybook/react": "*"
   }
 }
